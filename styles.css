@@ -1,30 +1,95 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
     text-align: center;
 }
 
+/* Cabeçalho */
 header {
     background-color: #b71c1c;
     color: white;
-    padding: 15px;
+    padding: 20px;
+    font-size: 22px;
 }
 
+/* Layout usando Grid */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+/* Painéis */
 .painel {
     background: white;
-    margin: 20px auto;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-    color: #b71c1c;
+/* Painel Nível do Rio */
+.painel-nivel {
+    grid-column: span 1;
+    background-color: #e3f2fd;
+    border-left: 6px solid #1565c0;
 }
 
-span {
+.painel-nivel h2 {
+    color: #1565c0;
+}
+
+.grande {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.variacao {
+    font-size: 18px;
+    color: #2e7d32;
+}
+
+/* Painel Total Geral */
+.painel-geral {
+    grid-column: span 1;
+    background-color: #fbe9e7;
+    border-left: 6px solid #d84315;
+}
+
+.painel-geral h2 {
+    color: #d84315;
+}
+
+.destaque {
+    font-size: 20px;
+    font-weight: bold;
+    color: #d84315;
+}
+
+/* Painel Total Diário */
+.painel-diario {
+    grid-column: span 1;
+    background-color: #f3e5f5;
+    border-left: 6px solid #6a1b9a;
+}
+
+.painel-diario h2 {
+    color: #6a1b9a;
+}
+
+/* Estilos das informações */
+.info-box {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    font-size: 16px;
     font-weight: bold;
 }
