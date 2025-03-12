@@ -1,5 +1,5 @@
 async function carregarDados() {
-    const url = "https://script.google.com/macros/s/SEU_SCRIPT_ID/exec"; // Substitua pela URL gerada no Google Apps Script
+    const url = "https://script.google.com/macros/s/AKfycbxZI721gwkQzCORVIj8Ba44-pIirG5J5mkSzyZ5x_DR_PQFRap263kDUBQdFLtTSECY/exec"; // Substitua pela URL gerada no Google Apps Script
 
     try {
         const resposta = await fetch(url);
