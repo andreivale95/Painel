@@ -1,12 +1,11 @@
 async function carregarDados() {
-    const url = "https://script.google.com/macros/s/AKfycbxZI721gwkQzCORVIj8Ba44-pIirG5J5mkSzyZ5x_DR_PQFRap263kDUBQdFLtTSECY/exec"; // Substitua pela URL gerada no Google Apps Script
+    const url = "https://script.google.com/macros/s/SEU_SCRIPT_ID/exec"; // Substitua pela URL gerada no Apps Script
 
     try {
         const resposta = await fetch(url);
         const dados = await resposta.json();
 
         document.getElementById("titulo").innerText = dados.titulo;
-        document.getElementById("horario").innerText = dados.horario;
         document.getElementById("nivel-rio-valor").innerText = dados.nivel_rio + "m";
         document.getElementById("variacao").innerText = dados.variacao;
 
